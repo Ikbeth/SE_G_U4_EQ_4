@@ -1,0 +1,59 @@
+{
+  "sensores": [
+    {
+      "id_sensor": "1",
+      "nombre": "Sensor de Movimiento",
+      "tipo": "Digital",
+      "valores": [
+        0,
+        1
+      ],
+      "createdAt": "18/4/2023, 14:28:50",
+      "updatedAt": "18/4/2023, 14:28:50"
+    },
+    {
+      "id_sensor": "2",
+      "nombre": "Potenciometro",
+      "tipo": "Analogico",
+      "valores": [
+        0,
+        1023
+      ],
+      "createdAt": "18/4/2023, 14:28:50",
+      "updatedAt": "18/4/2023, 14:28:50"
+    },
+    {
+      "id_sensor": "3",
+      "nombre": "Sensor Proximidad",
+      "tipo": "Analogico",
+      "valores": [
+        0,
+        1023
+      ],
+      "createdAt": "18/4/2023, 14:28:50",
+      "updatedAt": "18/4/2023, 14:28:50"
+    }
+  ],
+  "registros": [
+    {
+      "id_registro": "1",
+      "id_sensor": "2",
+      "valor": "80"
+    },
+    {
+      "id_registro": "2",
+      "id_sensor": "1",
+      "valor": "120"
+    },
+    {
+      "id_registro": "3",
+      "id_sensor": "2",
+      "valor": "40"
+    },
+    {
+      "id_registro": "4",
+      "id_sensor": "3",
+      "valor": "250"
+    }
+  ]
+}
