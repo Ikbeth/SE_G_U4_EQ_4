@@ -48,10 +48,10 @@ def lectura():
         except Exception as error:
             print(error)
 
-        ClienteREST.insertSensorRecords('1', datos[0])
-        ClienteREST.insertActuatorRecords('1', datos[1])
-        ClienteREST.insertActuatorRecords('2', datos[2])
-        ClienteREST.insertActuatorRecords('3', datos[3])
+        ClienteREST.insertSensorRecords(1, datos[0])
+        ClienteREST.insertActuatorRecords(1, datos[1])
+        ClienteREST.insertActuatorRecords(2, datos[2])
+        ClienteREST.insertActuatorRecords(3, datos[3])
 
         print(datos)
 

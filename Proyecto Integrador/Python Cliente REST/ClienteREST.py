@@ -11,8 +11,8 @@ def insertSensorRecords(id, valor):
     url = url_base + url_sensors + '/new/' + str(id)
     headers = {"Content-Type": "application/json"}
     body = {
-        "idSensor" : id,
-        "value": valor
+        "id_sensor": str(id),
+        "valores": valor
     }
     response = requests.post(url, data=json.dumps(body), headers=headers, verify=False)
     print(response.json())
@@ -24,8 +24,8 @@ def insertActuatorRecords(id, valor):
     url = url_base + url_actuators + '/new/' + str(id)
     headers = {"Content-Type": "application/json"}
     body = {
-        "idActuator" : id,
-        "value": valor
+        "id_actuator": str(id),
+        "valores": valor
     }
     response = requests.post(url, data=json.dumps(body), headers=headers, verify=False)
     print(response.json())
