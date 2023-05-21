@@ -20,12 +20,12 @@ const addActuatorRecord = function (req, res) {
         Current_value: body.valores
     };
 
-    //console.log('actuator: ', newActuator) //debug
+    console.log('actuator: ', newActuatorRecord) //debug
 
     try{
         // *** INTENTA AGREGAR AL SENSOR ***
         const actuatorRecord = actuatorService.insertActuatorRecord(newActuatorRecord) //SENSOR CONTIENE LOS DATOS DEL SENSOR QUE FUE AGREGADO A LA BASE DE DATOS A MODO DE ECHO
-        res.status(201).send({ status: "OK", data: actuator });
+        res.status(201).send({ status: "OK", data: actuatorRecord});
     
         }catch(error){
     
@@ -54,16 +54,16 @@ const SelectActuatorRecord = function (req, res) {
             })
     }
     // *** OBJETO QUE CONTIENE LA INFORMACION DEL NUEVO SENSOR ***
-    const newActuatorRecord = {
+    const selectActuatorRecord = {
         Id_actuator: body.id_actuator,
     };
 
-    //console.log('actuator: ', newActuator) //debug
+    console.log('actuator: ', selectActuatorRecord) //debug
 
     try{
         // *** INTENTA AGREGAR AL SENSOR ***
-        const actuatorRecord = actuatorService.SelectActuatorRecord(newActuatorRecord) //SENSOR CONTIENE LOS DATOS DEL SENSOR QUE FUE AGREGADO A LA BASE DE DATOS A MODO DE ECHO
-        res.status(201).send({ status: "OK", data: actuator });
+        const actuatorRecord = actuatorService.SelectActuatorRecord(selectActuatorRecord) //SENSOR CONTIENE LOS DATOS DEL SENSOR QUE FUE AGREGADO A LA BASE DE DATOS A MODO DE ECHO
+        res.status(201).send({ status: "OK", data: actuatorRecord});
     
         }catch(error){
     
