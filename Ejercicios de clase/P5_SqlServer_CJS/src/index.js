@@ -62,7 +62,7 @@ const sp_SelectALL_SensorsInfo = async function(){
     console.log(result.recordset)
 }
 
-sp_SelectALL_SensorsInfo()
+//sp_SelectALL_SensorsInfo()
 
 // LISTO
 const sp_select_sensor = async function(id_sensor){    
