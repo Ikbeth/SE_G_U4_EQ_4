@@ -2,6 +2,7 @@ const sensorService = require("../services/sensorService");
 
 const addSensorRecord = function (req, res) {
     const { body } = req
+    console.log(body)
 
     if (
         !body.id_sensor ||

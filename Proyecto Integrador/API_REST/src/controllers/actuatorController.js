@@ -3,6 +3,7 @@ const actuatorService = require('../services/actuatorService')
 
 const addActuatorRecord = function (req, res) {
     const { body } = req
+    console.log(body)
 
     if (
         !body.id_actuator ||
@@ -16,8 +17,8 @@ const addActuatorRecord = function (req, res) {
     }
     // *** OBJETO QUE CONTIENE LA INFORMACION DEL NUEVO SENSOR ***
     const newActuatorRecord = {
-        Id_actuator: body.id_actuator,
-        Current_value: body.valores
+        id_actuator: body.id_actuator,
+        valores: body.valores
     };
 
     console.log('actuator: ', newActuatorRecord) //debug
@@ -55,7 +56,7 @@ const SelectActuatorRecord = function (req, res) {
     }
     // *** OBJETO QUE CONTIENE LA INFORMACION DEL NUEVO SENSOR ***
     const selectActuatorRecord = {
-        Id_actuator: body.id_actuator,
+        id_actuator: body.id_actuator,
     };
 
     console.log('actuator: ', selectActuatorRecord) //debug

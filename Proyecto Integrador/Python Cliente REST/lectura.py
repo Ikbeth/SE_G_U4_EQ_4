@@ -47,11 +47,11 @@ def lectura():
                             datos = cadena.split('/')
         except Exception as error:
             print(error)
-
-        ClienteREST.insertSensorRecords(1, datos[0])
-        ClienteREST.insertActuatorRecords(1, datos[1])
-        ClienteREST.insertActuatorRecords(2, datos[2])
-        ClienteREST.insertActuatorRecords(3, datos[3])
+        # print(type(datos[0]))
+        ClienteREST.insertSensorRecords(1, float(datos[0]))
+        ClienteREST.insertActuatorRecords(1, int(datos[1]))
+        ClienteREST.insertActuatorRecords(2, int(datos[2]))
+        ClienteREST.insertActuatorRecords(3, int(datos[3]))
 
         print(datos)
 
