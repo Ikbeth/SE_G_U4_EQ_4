@@ -9,7 +9,7 @@ const router = express.Router()
 router
   .post("/new/:idActuator", actuatorController.addActuatorRecord)
 
-  .get("/records/:idActuator", actuatorController.SelectActuatorRecord)
+  .get("/records/", actuatorController.SelectActuatorRecord)
 
   //EXPORTA EL ROUTER PARA HACER POSIBLE SU POSTERIOR IMPORTANCION Y USO EN OTROS MODULOS
 module.exports = router;

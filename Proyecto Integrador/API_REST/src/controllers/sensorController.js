@@ -42,27 +42,9 @@ const addSensorRecord = function (req, res) {
 }
 
 const SelectSensorRecord = function (req, res) {
-    const { body } = req
-
-    if (
-        !body.id_sensor       
-    ) {        
-        res.status(400)
-           .send({
-            status:"Error", data:{
-                error:"Faltan datos"}
-            })
-    }
-    // *** OBJETO QUE CONTIENE LA INFORMACION DEL NUEVO SENSOR ***
-    const selectSensorRecord = {
-        Id_sensor: body.id_sensor,
-    };
-
-    console.log('sensor: ', selectSensorRecord) //debug
-
     try{
         // *** INTENTA AGREGAR AL SENSOR ***
-        const sensorRecord = sensorService.SelectSensorRecord(selectSensorRecord) //SENSOR CONTIENE LOS DATOS DEL SENSOR QUE FUE AGREGADO A LA BASE DE DATOS A MODO DE ECHO
+        const sensorRecord = sensorService.SelectSensorRecord() //SENSOR CONTIENE LOS DATOS DEL SENSOR QUE FUE AGREGADO A LA BASE DE DATOS A MODO DE ECHO
         res.status(201).send({ status: "OK", data: sensorRecord });
     
         }catch(error){

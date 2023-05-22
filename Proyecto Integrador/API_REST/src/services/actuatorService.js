@@ -14,14 +14,13 @@ const insertActuatorRecord = async function(JsonObj){
     console.log(result)
 }
 
-const SelectActuatorRecord = async function(JsonObj){
-    id = JsonObj.id_actuator
+const SelectActuatorRecord = async function(){
     const conexion = await getConnection()
     const result = await conexion
-    .request()      
-    .input("id_actuator", sql.Int, id)        
-    .execute('Select_Actuator_Record')
-    console.log(result.recordset[0])
+    .request()    
+    .execute('Select_ALL_Actuator_records')
+    console.log(result.recordset)
+    return result.recordset
 }
 
 module.exports = {

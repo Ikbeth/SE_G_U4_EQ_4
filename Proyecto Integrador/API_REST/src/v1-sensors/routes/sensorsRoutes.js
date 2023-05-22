@@ -9,6 +9,6 @@ const router = express.Router()
 router
   .post("/new/:idSensor", sensorController.addSensorRecord)
 
-  .get("/records/:idSensor", sensorController.SelectSensorRecord)
+  .get("/records/", sensorController.SelectSensorRecord)
   //EXPORTA EL ROUTER PARA HACER POSIBLE SU POSTERIOR IMPORTANCION Y USO EN OTROS MODULOS
 module.exports = router;
